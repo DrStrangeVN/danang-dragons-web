@@ -14,9 +14,16 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<meta name="theme-color" content="#0a0a0b">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="img/logo-dragons.png">
 <link rel="stylesheet" href="assets/styles.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SportsTeam","name":"Danang Dragons","alternateName":"Rồng sông Hàn","sport":"Basketball","foundingDate":"2016","location":{"@type":"City","name":"Đà Nẵng, Việt Nam"},"memberOf":{"@type":"SportsOrganization","name":"VBA - Vietnam Basketball Association"},"coach":{"@type":"Person","name":"Hoàng Thế Vinh"}}
+</script>
 </head>
 <body>
+<div class="progress" id="progress" aria-hidden="true"></div>
 
 <!-- ================= HEADER ================= -->
 <header class="site-header" id="siteHeader">
@@ -263,6 +270,47 @@
   </div>
 </div>
 
+<!-- ================= VINH DANH 2026 ================= -->
+<section id="vinh-danh">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-tag">Vinh danh</span>
+      <h2>Điểm sáng mùa 2026</h2>
+      <p>Giữa một mùa giải đầy thử thách, những cá nhân này đã thắp lên niềm tin cho người hâm mộ Rồng sông Hàn.</p>
+    </div>
+    <div class="awards reveal">
+      <div class="award gold">
+        <div class="a-icon">🏆</div>
+        <div class="a-tag">Cầu thủ xuất sắc nhất 2026</div>
+        <h4>Michael Soy <span>#3</span></h4>
+        <p>“Iron Man” của Dragons — thi đấu trọn vẹn 20 trận với hơn 34 phút mỗi trận.</p>
+        <div class="a-stats"><div><b>17.9</b><i>điểm/trận · hạng 6 giải</i></div><div><b>3.6</b><i>kiến tạo</i></div><div><b>4.5</b><i>rebounds</i></div></div>
+      </div>
+      <div class="award">
+        <div class="a-icon">📈</div>
+        <div class="a-tag">Tiến bộ vượt bậc</div>
+        <h4>Phan Trọng Tài <span>#19</span></h4>
+        <p>Từ cầu thủ trẻ tiềm năng thành trụ cột hàng thủ của đội.</p>
+        <div class="a-stats"><div><b>6.4</b><i>điểm/trận</i></div><div><b>1.9</b><i>cướp bóng · Top 3 giải</i></div></div>
+      </div>
+      <div class="award">
+        <div class="a-icon">🌱</div>
+        <div class="a-tag">Tân binh triển vọng</div>
+        <h4>Đại Hiệp &amp; Bảo Khang</h4>
+        <p>Cả hai cùng được đề cử <b>Rookie of the Year VBA 2026</b>.</p>
+        <div class="a-stats"><div><b>2</b><i>đề cử tân binh xuất sắc</i></div></div>
+      </div>
+      <div class="award">
+        <div class="a-icon">🤝</div>
+        <div class="a-tag">Tinh thần Rồng</div>
+        <h4>Cả tập thể</h4>
+        <p>Không bỏ cuộc dù mùa giải 0–20 — chiến đấu đến giây cuối cùng vì màu áo cam.</p>
+        <div class="a-stats"><div><b>20</b><i>trận không đầu hàng</i></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ================= TIN TỨC ================= -->
 <section id="tin-tuc" style="background:var(--bg-2)">
   <div class="wrap">
@@ -337,7 +385,20 @@
     </div>
     <p class="table-note reveal" style="margin-bottom:36px">Ảnh: WebThểThao. Logo thuộc bản quyền CLB Danang Dragons.</p>
 
-    <h3 class="mini-head reveal">Series nổi bật <span>trên MXH</span></h3>
+    <h3 class="mini-head reveal">Wallpapers <span>cho fan</span></h3>
+    <p class="table-note reveal" style="margin-bottom:18px">Tải về miễn phí — mang màu áo cam lên màn hình của bạn.</p>
+    <div class="wp-grid reveal">
+      <a class="wp-card" href="img/wallpaper-desktop.jpg" download="danang-dragons-wallpaper-desktop.jpg">
+        <img src="img/wallpaper-desktop.jpg" alt="Wallpaper Danang Dragons cho desktop" loading="lazy">
+        <span class="wp-dl">⬇ Desktop · 1920×1080</span>
+      </a>
+      <a class="wp-card" href="img/wallpaper-mobile.jpg" download="danang-dragons-wallpaper-mobile.jpg">
+        <img src="img/wallpaper-mobile.jpg" alt="Wallpaper Danang Dragons cho điện thoại" loading="lazy">
+        <span class="wp-dl">⬇ Mobile · 1080×1920</span>
+      </a>
+    </div>
+
+    <h3 class="mini-head reveal" style="margin-top:44px">Series nổi bật <span>trên MXH</span></h3>
     <div class="fan-acts reveal" style="margin-top:18px">
       <a class="act link" href="https://www.instagram.com/reel/DcLnfsYCjml/" target="_blank" rel="noopener"><h5>🏫 School Visit — Tập 4 →</h5><p>Thăm trường St. Nicholas (18/08/2026) — lan tỏa bóng rổ đến thế hệ trẻ Đà Nẵng.</p></a>
       <a class="act link" href="https://www.instagram.com/reel/DclAYXMw0NU/" target="_blank" rel="noopener"><h5>🔥 Highlight Michael Soy →</h5><p>Montage tổng kết mùa giải của “Iron Man” áo số 3 — 25 điểm trận chia tay sân nhà.</p></a>
@@ -356,6 +417,22 @@
     <figcaption id="lbCap"></figcaption>
   </figure>
 </div>
+
+<!-- ================= FAN ZONE ================= -->
+<section id="fan-zone">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-tag">Fan Zone</span>
+      <h2>Tiếng nói của khán đài</h2>
+      <p>Bình chọn cầu thủ được yêu thích nhất mùa 2026 — kết quả được lưu trên trình duyệt của bạn.</p>
+    </div>
+    <div class="poll reveal" id="mvpPoll">
+      <h3>🏅 Cầu thủ được yêu thích nhất <span>VBA 2026</span></h3>
+      <div class="poll-options" id="pollOptions"></div>
+      <p class="poll-note" id="pollNote">Chạm để bình chọn — mỗi trình duyệt 1 lượt.</p>
+    </div>
+  </div>
+</section>
 
 <!-- ================= VÉ & SÂN ================= -->
 <section id="ve" style="background:var(--bg-2)">

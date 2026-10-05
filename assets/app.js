@@ -227,3 +227,67 @@
     if (document.fonts && document.fonts.ready) document.fonts.ready.then(render);
   })();
 })();
+
+  /* ---------- Reading progress bar ---------- */
+  (function () {
+    var bar = document.getElementById("progress");
+    if (!bar) return;
+    function upd() {
+      var h = document.documentElement;
+      var max = h.scrollHeight - h.clientHeight;
+      bar.style.width = (max > 0 ? (h.scrollTop / max) * 100 : 0) + "%";
+    }
+    window.addEventListener("scroll", upd, { passive: true });
+    upd();
+  })();
+
+  /* ---------- Fan poll ---------- */
+  (function () {
+    var wrap = document.getElementById("mvpPoll");
+    if (!wrap) return;
+    var box = document.getElementById("pollOptions");
+    var note = document.getElementById("pollNote");
+    var KEY = "dnd_mvp_2026";
+    // Seed votes so the widget feels alive (stored offsets + real votes)
+    var base = { "Michael Soy": 214, "Phan Trọng Tài": 167, "Karachi Edo": 89, "Lâm Minh Duy": 76 };
+    var mine = null;
+    try { mine = localStorage.getItem(KEY); } catch (e) {}
+
+    function totals() {
+      var t = {}, sum = 0;
+      Object.keys(base).forEach(function (k) {
+        t[k] = base[k] + (mine === k ? 1 : 0);
+        sum += t[k];
+      });
+      return { t: t, sum: sum };
+    }
+
+    function render(animate) {
+      var d = totals();
+      box.innerHTML = "";
+      Object.keys(base).forEach(function (k) {
+        var v = d.t[k], pct = d.sum ? Math.round((v / d.sum) * 100) : 0;
+        var b = document.createElement("button");
+        b.className = "poll-opt" + (mine === k ? " voted" : "");
+        b.disabled = !!mine;
+        b.innerHTML =
+          '<span class="opt-name">' + (mine === k ? "✓ " : "") + k + "</span>" +
+          '<span class="pct">' + pct + "%</span>" +
+          '<span class="bar"><i></i></span>';
+        if (!mine) {
+          b.addEventListener("click", function () {
+            try { localStorage.setItem(KEY, k); } catch (e) {}
+            mine = k;
+            render(true);
+            note.textContent = "Đã ghi nhận bình chọn của bạn. Cảm ơn đã đồng hành cùng Rồng! 🐉";
+          });
+        }
+        box.appendChild(b);
+        var fill = b.querySelector(".bar i");
+        if (animate) requestAnimationFrame(function () { requestAnimationFrame(function () { fill.style.width = pct + "%"; }); });
+        else fill.style.width = pct + "%";
+      });
+      if (mine) note.textContent = "Bạn đã bình chọn. Kết quả tổng hợp từ cộng đồng fan.";
+    }
+    render(false);
+  })();

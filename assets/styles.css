@@ -499,3 +499,67 @@ button.pcard h4,button.pcard .nat{position:relative}
   .pm-top h3{font-size:21px}
   .modal-card{padding:26px 22px}
 }
+
+/* ============ Danang Dragons — v3 components ============ */
+
+/* Reading progress bar */
+.progress{
+  position:fixed;top:0;left:0;height:3px;width:0;z-index:200;
+  background:linear-gradient(90deg,var(--orange-deep),var(--orange));
+}
+
+/* Awards */
+.awards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.award{
+  border:1px solid var(--line);border-radius:var(--radius);padding:30px 26px;background:var(--card);
+  transition:transform .2s,border-color .2s;position:relative;overflow:hidden;
+}
+.award:hover{transform:translateY(-4px);border-color:rgba(255,107,26,.45)}
+.award.gold{border-color:rgba(255,107,26,.5);background:linear-gradient(160deg,rgba(255,107,26,.1),var(--card) 60%)}
+.a-icon{font-size:38px;margin-bottom:14px}
+.a-tag{font-size:11.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--orange);margin-bottom:10px}
+.award h4{font-size:20px;font-weight:800;margin-bottom:8px}
+.award h4 span{color:var(--orange);font-size:15px}
+.award p{color:var(--muted);font-size:14px;margin-bottom:16px}
+.a-stats{display:flex;gap:18px;flex-wrap:wrap;border-top:1px dashed var(--line);padding-top:14px}
+.a-stats b{display:block;font-size:24px;font-weight:800;color:var(--ink)}
+.a-stats i{display:block;font-style:normal;font-size:11.5px;color:var(--faint);margin-top:2px}
+@media(max-width:1020px){.awards{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.awards{grid-template-columns:1fr}}
+
+/* Fan poll */
+.poll{
+  max-width:720px;margin:0 auto;border:1px solid var(--line);border-radius:20px;
+  padding:38px;background:linear-gradient(160deg,rgba(255,107,26,.07),var(--card) 55%);
+}
+.poll h3{font-size:22px;font-weight:800;margin-bottom:22px;text-align:center}
+.poll h3 span{color:var(--orange)}
+.poll-options{display:flex;flex-direction:column;gap:12px}
+.poll-opt{
+  display:grid;grid-template-columns:1fr auto;gap:4px 14px;align-items:center;
+  border:1px solid var(--line);border-radius:12px;padding:14px 18px;background:rgba(255,255,255,.02);
+  cursor:pointer;transition:.2s;font-family:inherit;color:inherit;width:100%;text-align:left;font-size:15px;
+}
+button.poll-opt{font-weight:600}
+.poll-opt:hover:not(:disabled){border-color:var(--orange);transform:translateX(4px)}
+.poll-opt:disabled{cursor:default}
+.poll-opt .bar{grid-column:1/-1;height:8px;border-radius:99px;background:rgba(255,255,255,.06);overflow:hidden}
+.poll-opt .bar i{display:block;height:100%;width:0;border-radius:99px;background:linear-gradient(90deg,var(--orange-deep),var(--orange));transition:width 1s cubic-bezier(.2,.8,.2,1)}
+.poll-opt .pct{font-weight:800;color:var(--orange);font-size:14px}
+.poll-opt.voted{border-color:var(--orange);background:var(--orange-soft)}
+.poll-note{text-align:center;color:var(--faint);font-size:13px;margin-top:18px}
+
+/* Wallpapers */
+.wp-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:860px}
+.wp-card{
+  position:relative;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;
+  transition:transform .2s,border-color .2s;display:block;
+}
+.wp-card:hover{transform:translateY(-4px);border-color:rgba(255,107,26,.5)}
+.wp-card img{width:100%;height:230px;object-fit:cover;display:block}
+.wp-dl{
+  position:absolute;left:14px;bottom:14px;font-size:13px;font-weight:700;
+  background:rgba(10,10,11,.82);border:1px solid rgba(255,107,26,.5);color:var(--orange);
+  padding:8px 16px;border-radius:999px;backdrop-filter:blur(6px);
+}
+@media(max-width:640px){.wp-grid{grid-template-columns:1fr}}
