@@ -4,12 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Danang Dragons — Rồng Sông Hàn | Bóng rổ Đà Nẵng VBA</title>
-<meta name="description" content="Danang Dragons — đội bóng rổ chuyên nghiệp Đà Nẵng tại VBA. Lịch sử vô địch 2016, đội hình, cầu thủ nổi bật, vé xem trận và cộng đồng Rồng sông Hàn.">
+<meta name="description" content="Danang Dragons — đội bóng rổ chuyên nghiệp Đà Nẵng tại VBA. Lịch sử vô địch 2016, đội hình, BXH VBA 2026, tin tức, thư viện ảnh và cộng đồng Rồng sông Hàn.">
 <meta property="og:title" content="Danang Dragons — Rồng Sông Hàn">
 <meta property="og:description" content="Nhà vô địch VBA 2016. Đội bóng rổ của thành phố Đà Nẵng.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="vi_VN">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%230a0a0b'/%3E%3Ccircle cx='32' cy='32' r='29' fill='none' stroke='%23ff6b1a' stroke-width='3'/%3E%3Ctext x='32' y='42' font-family='Arial Black' font-size='24' font-weight='900' fill='%23ff6b1a' text-anchor='middle'%3E%C4%90D%3C/text%3E%3C/svg%3E">
+<meta property="og:image" content="img/logo-dragons.png">
+<link rel="icon" href="img/logo-dragons.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -21,18 +22,15 @@
 <header class="site-header" id="siteHeader">
   <div class="wrap nav">
     <a class="brand" href="#top" aria-label="Danang Dragons">
-      <svg class="mark" viewBox="0 0 64 64" aria-hidden="true">
-        <circle cx="32" cy="32" r="29" fill="#141416" stroke="#ff6b1a" stroke-width="3"/>
-        <path d="M20 44 L26 20 L32 32 L38 20 L44 44" fill="none" stroke="#ff6b1a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-        <circle cx="32" cy="48" r="2.6" fill="#ff6b1a"/>
-      </svg>
+      <img class="mark" src="img/logo-dragons.png" alt="Logo Danang Dragons" width="44" height="36">
       <span class="t"><small>DANANG</small><b>DRAGONS</b></span>
     </a>
     <nav class="nav-links" id="navLinks" aria-label="Điều hướng chính">
       <a href="#tong-quan">Tổng quan</a>
       <a href="#lich-su">Lịch sử</a>
       <a href="#doi-hinh">Đội hình</a>
-      <a href="#cau-thu">Cầu thủ</a>
+      <a href="#tin-tuc">Tin tức</a>
+      <a href="#thu-vien">Thư viện</a>
       <a href="#ve">Vé &amp; Sân</a>
       <a href="#cong-dong">Cộng đồng</a>
       <a class="btn sm" href="https://ticket.danangdragons.nextix.cloud" target="_blank" rel="noopener">Mua vé</a>
@@ -45,19 +43,13 @@
 
 <!-- ================= HERO ================= -->
 <section class="hero" id="top">
+  <div class="hero-photo" aria-hidden="true"></div>
+  <div class="hero-shade" aria-hidden="true"></div>
   <div class="hero-grid-lines" aria-hidden="true"></div>
-  <svg class="court" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-    <g fill="none" stroke="rgba(255,107,26,.14)" stroke-width="2">
-      <circle cx="600" cy="300" r="180"/>
-      <circle cx="600" cy="300" r="60"/>
-      <line x1="600" y1="0" x2="600" y2="600"/>
-      <rect x="60" y="180" width="180" height="240"/>
-      <rect x="960" y="180" width="180" height="240"/>
-      <path d="M240 232 A68 68 0 0 1 240 368"/>
-      <path d="M960 232 A68 68 0 0 0 960 368"/>
-    </g>
-  </svg>
   <div class="wrap" style="position:relative;width:100%">
+    <div class="hero-logo-row reveal in">
+      <img src="img/logo-dragons.png" alt="Logo chính thức Danang Dragons" class="hero-logo" width="150">
+    </div>
     <p class="kicker">VBA · Vietnam Basketball Association · Est. 2016</p>
     <h1>DANANG<br><span class="row2">DRAGONS</span></h1>
     <p class="sub"><b>Rồng sông Hàn</b> — đội bóng rổ chuyên nghiệp của thành phố Đà Nẵng. Nhà vô địch mùa giải khai mạc VBA 2016 với kỳ tích từ hạt giống thấp nhất.</p>
@@ -68,12 +60,20 @@
     <div class="hero-meta">
       <div class="m"><div class="n"><em>2016</em></div><div class="l">Năm thành lập</div></div>
       <div class="m"><div class="n">1×</div><div class="l">Vô địch VBA</div></div>
-      <div class="m"><div class="n">3.200</div><div class="l">Chỗ ngồi sân nhà</div></div>
+      <div class="m"><div class="n">11</div><div class="l">Mùa giải VBA</div></div>
       <div class="m"><div class="n">79K+</div><div class="l">Fan trên Facebook</div></div>
     </div>
   </div>
   <div class="scroll-hint" aria-hidden="true">Cuộn xuống</div>
 </section>
+
+<!-- ================= TICKER ================= -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span>RỒNG SÔNG HÀN</span><i>◆</i><span>EST. 2016</span><i>◆</i><span>VÔ ĐỊCH VBA 2016</span><i>◆</i><span>RISE TOGETHER</span><i>◆</i><span>ĐÀ NẴNG</span><i>◆</i>
+    <span>RỒNG SÔNG HÀN</span><i>◆</i><span>EST. 2016</span><i>◆</i><span>VÔ ĐỊCH VBA 2016</span><i>◆</i><span>RISE TOGETHER</span><i>◆</i><span>ĐÀ NẴNG</span><i>◆</i>
+  </div>
+</div>
 
 <!-- ================= TỔNG QUAN ================= -->
 <section id="tong-quan">
@@ -85,15 +85,16 @@
     </div>
     <div class="about-grid">
       <div class="about-copy reveal">
-        <p>Thành lập năm <b>2016</b>, Danang Dragons thi đấu tại <b>VBA – Giải Bóng rổ Chuyên nghiệp Việt Nam</b>, với sân nhà là <b>Nhà thi đấu Quân khu 5</b> tại Đà Nẵng.</p>
-        <p>Đội bóng khoác áo đấu màu <b>cam – đen</b> đặc trưng, và là cái tên gắn với một trong những câu chuyện đẹp nhất lịch sử VBA: lên ngôi vô địch ngay mùa giải đầu tiên dù bị đánh giá thấp nhất.</p>
+        <p>Thành lập năm <b>2016</b>, Danang Dragons thi đấu tại <b>VBA – Giải Bóng rổ Chuyên nghiệp Việt Nam</b>, với sân nhà là <b>Nhà thi đấu Quân khu 5</b> (07 Duy Tân, Hải Châu, Đà Nẵng).</p>
+        <p>Đội bóng khoác áo đấu màu <b>cam – đen</b> đặc trưng, linh vật <b>rồng cam</b> khuấy động khán đài, và là cái tên gắn với một trong những câu chuyện đẹp nhất lịch sử VBA: lên ngôi vô địch ngay mùa giải đầu tiên dù bị đánh giá thấp nhất.</p>
         <div class="fact-list">
           <div class="fact"><div class="k">Tên đầy đủ</div><div class="v">Danang Dragons</div></div>
           <div class="fact"><div class="k">Biệt danh</div><div class="v">“Rồng sông Hàn”</div></div>
           <div class="fact"><div class="k">Thành lập</div><div class="v">2016 — mùa khai mạc VBA</div></div>
-          <div class="fact"><div class="k">Sân nhà</div><div class="v">Nhà thi đấu Quân khu 5, Đà Nẵng<small>Sức chứa khoảng 3.200 chỗ ngồi</small></div></div>
+          <div class="fact"><div class="k">Sân nhà</div><div class="v">Nhà thi đấu Quân khu 5<small>07 Duy Tân, Hải Châu, Đà Nẵng · ~3.200 chỗ ngồi</small></div></div>
           <div class="fact"><div class="k">HLV trưởng</div><div class="v">Hoàng Thế Vinh<small>Dẫn dắt từ mùa VBA 2025 (VBA Star X)</small></div></div>
-          <div class="fact"><div class="k">Màu áo</div><div class="v">Cam – Đen<small>Áo sân nhà màu cam, sân khách màu đen</small></div></div>
+          <div class="fact"><div class="k">Màu áo</div><div class="v">Cam – Đen<small>Áo sân nhà màu cam, sân khách màu trắng</small></div></div>
+          <div class="fact"><div class="k">Linh vật</div><div class="v">Rồng cam<small>Xuất hiện tại các sự kiện và Gala Dinner của đội</small></div></div>
         </div>
       </div>
       <aside class="champ-card reveal">
@@ -103,6 +104,12 @@
         <p class="note">Danh hiệu cá nhân mùa 2016: Domestic MVP — Lê Ngọc Tú · International MVP — Rudolphe Joly.</p>
       </aside>
     </div>
+
+    <div class="chart-block reveal">
+      <h3>Thắng mỗi mùa <span>2016 – 2026</span></h3>
+      <p class="chart-sub">Số trận thắng tại vòng bảng qua 11 mùa giải VBA — đỉnh cao 2016 và hành trình tái thiết.</p>
+      <div class="chart-wrap"><canvas id="winsChart" height="260" aria-label="Biểu đồ số trận thắng mỗi mùa"></canvas></div>
+    </div>
   </div>
 </section>
 
@@ -111,8 +118,8 @@
   <div class="wrap">
     <div class="sec-head reveal">
       <span class="sec-tag">Lịch sử &amp; Thành tích</span>
-      <h2>Mười mùa giải của Rồng</h2>
-      <p>Từ chức vô địch năm đầu tiên đến hành trình tái thiết — những cột mốc đáng nhớ của Danang Dragons tại VBA.</p>
+      <h2>Mười một mùa giải của Rồng</h2>
+      <p>Từ chức vô địch năm đầu tiên đến những nốt trầm — và niềm tin vào lứa cầu thủ trẻ đang trưởng thành.</p>
     </div>
     <div class="timeline reveal">
       <div class="tl-item gold">
@@ -147,9 +154,9 @@
       </div>
       <div class="tl-item">
         <div class="yr">2026</div>
-        <h4>Mùa giải đang diễn ra</h4>
-        <p>Michael Soy trở lại đội hình, ngoại binh Brandon Scott-Dior Wood gia nhập cùng những gương mặt trẻ tiến bộ như Phan Trọng Tài (#19). Thông điệp của VBA 2026: <i>“Inspiring a New Generation”</i>.</p>
-        <span class="badge live">Đang cập nhật</span>
+        <h4>Mùa giải của những bài học</h4>
+        <p>Dragons khép lại VBA 2026 với thành tích 0–20. Giữa mùa giải đầy khó khăn, <b>Michael Soy</b> rực sáng với trung bình 17.9 điểm/trận (hạng 6 toàn giải), còn <b>Phan Trọng Tài</b> (#19) lọt top 3 cầu thủ cướp bóng nhiều nhất giải. HLV Hoàng Thế Vinh gửi lời xin lỗi người hâm mộ và đặt niềm tin vào lứa trẻ cho chặng đường phía trước.</p>
+        <span class="rec">Thắng–Thua: 0–20 · Hạng 6</span>
       </div>
     </div>
 
@@ -167,10 +174,41 @@
           <tr><td>2023</td><td class="w">1</td><td class="l">17</td><td>7</td><td><span class="badge dim">—</span></td></tr>
           <tr><td>2024</td><td class="w">7</td><td class="l">13</td><td>5</td><td><span class="badge dim">—</span></td></tr>
           <tr><td>2025</td><td class="w">8</td><td class="l">10</td><td>5</td><td><span class="badge dim">—</span></td></tr>
+          <tr><td>2026</td><td class="w">0</td><td class="l">20</td><td>6</td><td><span class="badge dim">—</span></td></tr>
         </tbody>
       </table>
     </div>
-    <p class="table-note">Số liệu tổng hợp từ Wikipedia và các nguồn báo chí công khai. Mùa 2026 đang diễn ra, số liệu sẽ được cập nhật khi có thông tin chính thức.</p>
+
+    <div class="split" style="margin-top:52px">
+      <div class="reveal">
+        <h3 class="mini-head">Bảng xếp hạng <span>VBA 2026</span> — chung cuộc</h3>
+        <div class="table-scroll" style="margin-top:16px">
+          <table class="seasons standings" aria-label="Bảng xếp hạng VBA 2026">
+            <thead><tr><th>#</th><th>Đội</th><th>Trận</th><th>T–B</th><th>Win%</th></tr></thead>
+            <tbody>
+              <tr><td>1</td><td><b>Hanoi Buffaloes</b></td><td>20</td><td>19–1</td><td>95.0</td></tr>
+              <tr class="champ"><td>2</td><td><b>Saigon Heat 🏆</b></td><td>20</td><td>12–8</td><td>60.0</td></tr>
+              <tr><td>3</td><td><b>Nha Trang Dolphins</b></td><td>20</td><td>12–8</td><td>60.0</td></tr>
+              <tr><td>4</td><td><b>Hochiminh City Wings</b></td><td>20</td><td>10–10</td><td>50.0</td></tr>
+              <tr><td>5</td><td><b>Cantho Catfish</b></td><td>20</td><td>7–13</td><td>35.0</td></tr>
+              <tr class="us"><td>6</td><td><b>Danang Dragons</b></td><td>20</td><td>0–20</td><td>0.0</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="table-note">Saigon Heat vô địch VBA 2026 (lần thứ 6) sau khi thắng Hanoi Buffaloes 3–1 ở chung kết. Nguồn: sportradar, cập nhật 10/2026.</p>
+      </div>
+      <div class="reveal">
+        <h3 class="mini-head">5 trận cuối <span>mùa 2026</span></h3>
+        <div class="results" style="margin-top:16px">
+          <div class="result"><div class="r-date">22/08</div><div class="r-teams"><b>Dragons</b> 91 – 105 Dolphins</div><span class="badge dim">Thua</span></div>
+          <div class="result"><div class="r-date">20/08</div><div class="r-teams"><b>Dragons</b> 78 – 99 <span>Đối thủ</span></div><span class="badge dim">Thua</span></div>
+          <div class="result"><div class="r-date">15/08</div><div class="r-teams"><b>Dragons</b> 78 – 112 <span>Đối thủ</span></div><span class="badge dim">Thua</span></div>
+          <div class="result"><div class="r-date">13/08</div><div class="r-teams"><b>Dragons</b> 90 – 94 <span>Đối thủ</span></div><span class="badge dim">Thua</span></div>
+          <div class="result"><div class="r-date">09/08</div><div class="r-teams"><b>Dragons</b> 91 – 120 Buffaloes</div><span class="badge dim">Thua</span></div>
+        </div>
+        <p class="table-note">Nguồn: BetExplorer. Mùa giải VBA 2026 đã khép lại (playoff 05–27/09/2026).</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -180,86 +218,152 @@
     <div class="sec-head reveal">
       <span class="sec-tag">Đội hình</span>
       <h2>Những chiến binh áo cam</h2>
-      <p>Đội hình tiêu biểu các mùa gần đây — sự kết hợp giữa ngoại binh chất lượng, cầu thủ heritage và lứa nội binh trưởng thành từ lò đào tạo của đội.</p>
+      <p>Bấm vào từng cầu thủ để xem hồ sơ chi tiết và chỉ số nổi bật. Đội hình mùa VBA 2026.</p>
     </div>
 
     <div class="roster-group reveal">
       <h3>Ngoại binh &amp; Heritage</h3>
       <div class="cards">
-        <div class="pcard star"><div class="jersey">🇺🇸</div><div class="pos">Ngoại binh · 2025</div><h4>Karachi Edo</h4><div class="nat">Mỹ — Tay săn điểm số 1 của đội, nhiều trận 27–33 điểm cùng 18–21 rebounds.</div><div class="hl">Trụ cột hàng công mùa VBA Star X</div></div>
-        <div class="pcard star"><div class="jersey">🇺🇸</div><div class="pos">Ngoại binh · 2025</div><h4>Timothy Simmons</h4><div class="nat">Mỹ — Hậu vệ kiến tạo.</div><div class="hl">Triple-double lịch sử 12–12–12, đầu tiên của mùa VBA Star X</div></div>
-        <div class="pcard"><div class="jersey">🇲🇳</div><div class="pos">Ngoại binh · 2025</div><h4>Ganbat Chinbold</h4><div class="nat">Mông Cổ — Trung phong khu vực dưới rổ.</div></div>
-        <div class="pcard star"><div class="jersey">🇨🇦</div><div class="pos">Heritage · 2026</div><h4>Michael Soy<span class="tag-new">MỚI</span></h4><div class="nat">Gốc Việt, sinh tại Ottawa (Canada) — chính thức trở lại đội hình tháng 05/2026.</div><div class="hl">Sự trở lại được fan chờ đợi nhất mùa 2026</div></div>
-        <div class="pcard"><div class="jersey">🇺🇸</div><div class="pos">Ngoại binh · 2026</div><h4>Brandon Scott-Dior Wood<span class="tag-new">MỚI</span></h4><div class="nat">Mỹ — Hậu vệ dẫn bóng số 1 toàn giải về kiến tạo (5.2/trận).</div><div class="hl">Trung bình 14.7 điểm · 5.2 kiến tạo · 4.1 rebounds</div></div>
-        <div class="pcard"><div class="jersey">🇺🇸</div><div class="pos">Ngoại binh · 2026</div><h4>Corey Raley Ross</h4><div class="nat">Mỹ — Bổ sung chiều sâu đội hình mùa 2026.</div></div>
+        <button class="pcard star" data-player="edo"><span class="jersey">#4</span><span class="pos">Ngoại binh · Mỹ</span><h4>Karachi Edo</h4><span class="nat">Tay săn điểm số 1 của đội</span><span class="more">Xem hồ sơ →</span></button>
+        <button class="pcard star" data-player="simmons"><span class="jersey">🇺🇸</span><span class="pos">Ngoại binh · Mỹ</span><h4>Timothy Simmons</h4><span class="nat">Hậu vệ kiến tạo</span><span class="more">Xem hồ sơ →</span></button>
+        <button class="pcard" data-player="chinbold"><span class="jersey">🇲🇳</span><span class="pos">Ngoại binh · Mông Cổ</span><h4>Ganbat Chinbold</h4><span class="nat">Trung phong dưới rổ</span><span class="more">Xem hồ sơ →</span></button>
+        <button class="pcard star" data-player="soy"><span class="jersey">#3</span><span class="pos">Heritage · Canada</span><h4>Michael Soy</h4><span class="nat">Điểm sáng rực rỡ nhất mùa 2026</span><span class="more">Xem hồ sơ →</span></button>
+        <button class="pcard" data-player="wood"><span class="jersey">🇺🇸</span><span class="pos">Ngoại binh · Mỹ</span><h4>Brandon Wood</h4><span class="nat">Top 1 kiến tạo toàn giải</span><span class="more">Xem hồ sơ →</span></button>
+        <button class="pcard" data-player="ross"><span class="jersey">🇺🇸</span><span class="pos">Ngoại binh · Mỹ</span><h4>Corey Raley Ross</h4><span class="nat">Bổ sung chiều sâu đội hình</span><span class="more">Xem hồ sơ →</span></button>
       </div>
     </div>
 
     <div class="roster-group reveal">
       <h3>Nội binh</h3>
       <div class="cards">
-        <div class="pcard"><div class="jersey">19</div><div class="pos">Nội binh · #19</div><h4>Phan Trọng Tài</h4><div class="nat">Tiến bộ vượt bậc từ 2025 sang 2026, gương mặt trẻ đáng xem nhất của đội.</div></div>
-        <div class="pcard"><div class="jersey">5</div><div class="pos">Nội binh · #5</div><h4>Lê Hoàng Quân</h4><div class="nat">Đóng góp quan trọng từ băng ghế dự bị.</div></div>
-        <div class="pcard star"><div class="jersey">—</div><div class="pos">Nội binh trụ cột</div><h4>Mai Phước Thịnh</h4><div class="nat">Trụ cột nội binh nhiều mùa giải, thủ lĩnh tinh thần của đội.</div></div>
-        <div class="pcard star"><div class="jersey">—</div><div class="pos">Nội binh</div><h4>Lâm Minh Duy</h4><div class="nat">Biệt danh “Gấu đen” — từng phá kỷ lục ghi điểm cá nhân trong một trận đấu.</div></div>
-        <div class="pcard"><div class="jersey">—</div><div class="pos">Hậu vệ</div><h4>Hoàng Tú</h4><div class="nat">Hậu vệ trẻ nổi bật, nhiều trận ghi 11–15 điểm từ ghế dự bị (mùa 2025).</div></div>
-        <div class="pcard"><div class="jersey">—</div><div class="pos">Nội binh kỳ cựu</div><h4>Triệu Hán Minh</h4><div class="nat">Kinh nghiệm dày dặn, điểm tựa cho lứa cầu thủ trẻ.</div></div>
-        <div class="pcard"><div class="jersey">—</div><div class="pos">Tân binh · 2026</div><h4>Nguyễn Đại Hiệp<span class="tag-new">MỚI</span></h4><div class="nat">Tân binh 30 tuổi, lần đầu ký hợp đồng chuyên nghiệp — câu chuyện truyền cảm hứng mùa 2026.</div></div>
+        <button class="pcard star" data-player="trongtai"><span class="jersey">#19</span><span class="pos">Nội binh · Hậu vệ</span><h4>Phan Trọng Tài</h4><span class="nat">Top 3 cướp bóng toàn giải VBA 2026</span><span class="more">Xem hồ sơ →</span></button>
+        <button class="pcard" data-player="quan"><span class="jersey">#5</span><span class="pos">Nội binh</span><h4>Lê Hoàng Quân</h4><span class="nat">Đóng góp quan trọng từ ghế dự bị</span><span class="more">Xem hồ sơ →</span></button>
+        <button class="pcard star" data-player="thinh"><span class="jersey">—</span><span class="pos">Nội binh trụ cột</span><h4>Mai Phước Thịnh</h4><span class="nat">Thủ lĩnh tinh thần của đội</span><span class="more">Xem hồ sơ →</span></button>
+        <button class="pcard star" data-player="duy"><span class="jersey">—</span><span class="pos">Nội binh</span><h4>Lâm Minh Duy</h4><span class="nat">“Gấu đen” — kỷ lục điểm cá nhân</span><span class="more">Xem hồ sơ →</span></button>
+        <button class="pcard" data-player="tu"><span class="jersey">—</span><span class="pos">Hậu vệ</span><h4>Hoàng Tú</h4><span class="nat">Hậu vệ trẻ nổi bật mùa 2025</span><span class="more">Xem hồ sơ →</span></button>
+        <button class="pcard" data-player="minh"><span class="jersey">—</span><span class="pos">Nội binh kỳ cựu</span><h4>Triệu Hán Minh</h4><span class="nat">Điểm tựa kinh nghiệm cho lứa trẻ</span><span class="more">Xem hồ sơ →</span></button>
+        <button class="pcard" data-player="hiep"><span class="jersey">—</span><span class="pos">Tân binh 2026</span><h4>Nguyễn Đại Hiệp</h4><span class="nat">Đề cử Rookie of the Year VBA 2026</span><span class="more">Xem hồ sơ →</span></button>
+        <button class="pcard" data-player="khang"><span class="jersey">—</span><span class="pos">Tân binh 2026</span><h4>Lê Trung Bảo Khang</h4><span class="nat">Đề cử Rookie of the Year VBA 2026</span><span class="more">Xem hồ sơ →</span></button>
       </div>
     </div>
-    <p class="table-note reveal">Đội hình mùa 2026 đang trong quá trình hoàn thiện. Một số số áo (#1, #13, #14, #25) đã xuất hiện trong video chính thức của đội nhưng chưa công bố danh tính — trang sẽ cập nhật khi có thông tin chính thức.</p>
   </div>
 </section>
 
-<!-- ================= CẦU THỦ NỔI BẬT ================= -->
-<section id="cau-thu" style="background:var(--bg-2)">
+<!-- Player modal -->
+<div class="modal" id="playerModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="pmName">
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-card">
+    <button class="modal-close" data-close aria-label="Đóng">✕</button>
+    <div class="pm-top">
+      <div class="pm-jersey" id="pmJersey">#</div>
+      <div><div class="pm-pos" id="pmPos"></div><h3 id="pmName"></h3></div>
+    </div>
+    <p class="pm-bio" id="pmBio"></p>
+    <ul class="pm-stats" id="pmStats"></ul>
+  </div>
+</div>
+
+<!-- ================= TIN TỨC ================= -->
+<section id="tin-tuc" style="background:var(--bg-2)">
   <div class="wrap">
     <div class="sec-head reveal">
-      <span class="sec-tag">Tiêu điểm</span>
-      <h2>Những cái tên làm nên Rồng</h2>
+      <span class="sec-tag">Tin tức</span>
+      <h2>Nhịp đập của Rồng</h2>
+      <p>Những câu chuyện mới nhất về đội — từ sân đấu đến hậu trường và cộng đồng.</p>
     </div>
-    <div class="star-grid">
-      <article class="star-card reveal">
-        <div class="star-top"><div class="big">EDO</div><h4>Karachi Edo</h4><div class="role">Ngoại binh · Tay săn điểm</div></div>
-        <div class="star-body"><p>Cỗ máy ghi điểm của Dragons mùa 2025 với những màn trình diễn bùng nổ cả về điểm số lẫn khả năng tranh chấp dưới rổ.</p>
-        <ul><li>Nhiều trận 27–33 điểm</li><li>18–21 rebounds/trận ở phong độ cao nhất</li><li>Trụ cột hàng công VBA Star X</li></ul></div>
-      </article>
-      <article class="star-card reveal">
-        <div class="star-top"><div class="big">SIM</div><h4>Timothy Simmons</h4><div class="role">Ngoại binh · Hậu vệ kiến tạo</div></div>
-        <div class="star-body"><p>Bộ não của Dragons với nhãn quan chiến thuật xuất sắc — chủ nhân của một trong những kỷ lục đẹp nhất VBA 2025.</p>
-        <ul><li>Triple-double 12 điểm – 12 rebounds – 12 kiến tạo</li><li>Người đầu tiên lập triple-double ở mùa VBA Star X</li></ul></div>
-      </article>
-      <article class="star-card reveal">
-        <div class="star-top"><div class="big">SOY</div><h4>Michael Soy</h4><div class="role">Heritage · Trở lại 2026</div></div>
-        <div class="star-body"><p>Cầu thủ gốc Việt sinh tại Ottawa, Canada. Sự trở lại đội hình tháng 05/2026 của anh là tin vui lớn nhất với người hâm mộ Rồng sông Hàn.</p>
-        <ul><li>Chính thức tái ký hợp đồng 11/05/2026</li><li>Kinh nghiệm thi đấu quốc tế dày dặn</li></ul></div>
-      </article>
-      <article class="star-card reveal">
-        <div class="star-top"><div class="big">DUY</div><h4>Lâm Minh Duy</h4><div class="role">Nội binh · “Gấu đen”</div></div>
-        <div class="star-body"><p>Biểu tượng của tinh thần chiến đấu không bỏ cuộc — từ cầu thủ nội binh cần mẫn đến người từng xô đổ kỷ lục ghi điểm cá nhân của chính mình.</p>
-        <ul><li>Biệt danh “Gấu đen” từ người hâm mộ</li><li>Kỷ lục điểm số cá nhân trong một trận</li></ul></div>
-      </article>
-      <article class="star-card reveal">
-        <div class="star-top"><div class="big">TÀI</div><h4>Phan Trọng Tài · #19</h4><div class="role">Nội binh · Thế hệ mới</div></div>
-        <div class="star-body"><p>Bước tiến dài từ mùa 2025 sang 2026, Trọng Tài đại diện cho hướng đi phát triển cầu thủ trẻ mà Dragons đang theo đuổi.</p>
-        <ul><li>Số áo 19 — đã được xác nhận</li><li>Phong độ ổn định ở mùa 2026</li></ul></div>
-      </article>
-      <article class="star-card reveal">
-        <div class="star-top"><div class="big">WOOD</div><h4>Brandon Wood</h4><div class="role">Ngoại binh · 2026</div></div>
-        <div class="star-body"><p>Hậu vệ người Mỹ mang đến khả năng tổ chức lối chơi hàng đầu giải đấu cho Dragons ở mùa 2026.</p>
-        <ul><li>Top 1 toàn giải về kiến tạo: 5.2/trận</li><li>Trung bình 14.7 điểm · 4.1 rebounds</li></ul></div>
-      </article>
+    <div class="news-grid reveal">
+      <a class="news-card featured" href="https://webthethao.vn/bai-viet/tai-nang-tre-danang-dragons-gay-thot-tim-voi-su-co-co-giat-tren-san-vba-2026-ART-206555" target="_blank" rel="noopener">
+        <img src="img/photo-trongtai-5.webp" alt="Phan Trọng Tài trong màu áo Danang Dragons" loading="lazy">
+        <div class="news-body">
+          <span class="news-date">09/2026 · WebThểThao</span>
+          <h4>Tài năng trẻ Danang Dragons gây thót tim với sự cố trên sân VBA 2026</h4>
+          <p>Phan Trọng Tài (#19) bị co giật sau pha tiếp đất ở trận gặp Hanoi Buffaloes. Rất may sức khỏe đã ổn định — anh khép lại mùa giải với trung bình 6.4 điểm và đứng thứ 3 toàn giải về cướp bóng.</p>
+          <span class="news-link">Đọc bài viết →</span>
+        </div>
+      </a>
+      <a class="news-card" href="https://www.facebook.com/reel/997501869972490/" target="_blank" rel="noopener">
+        <div class="news-body">
+          <span class="news-date">04/09/2026 · Fanpage Danang Dragons</span>
+          <h4>HLV Hoàng Thế Vinh gửi lời xin lỗi người hâm mộ</h4>
+          <p>Trong buổi phỏng vấn cuối mùa, thầy Vinh cùng trợ lý Đàm Huy Đại trải lòng về chấn thương của các ngoại binh và đặt niềm tin vào lứa cầu thủ trẻ.</p>
+          <span class="news-link">Xem reel →</span>
+        </div>
+      </a>
+      <a class="news-card" href="https://www.instagram.com/p/DdLMr_gEvKD/" target="_blank" rel="noopener">
+        <div class="news-body">
+          <span class="news-date">12/09/2026 · VBA Awards</span>
+          <h4>Hai tân binh Dragons được đề cử Rookie of the Year</h4>
+          <p>Nguyễn Đại Hiệp và Lê Trung Bảo Khang lọt danh sách đề cử Tân binh xuất sắc nhất VBA 2026 — tín hiệu tích cực cho tương lai của Rồng sông Hàn.</p>
+          <span class="news-link">Xem bài đăng →</span>
+        </div>
+      </a>
+      <a class="news-card" href="https://www.instagram.com/reel/DclAYXMw0NU/" target="_blank" rel="noopener">
+        <div class="news-body">
+          <span class="news-date">2026 · Bóng Rổ Đó Đây</span>
+          <h4>Michael Soy — điểm sáng rực rỡ giữa mùa giải khó khăn</h4>
+          <p>Trung bình 17.9 điểm (hạng 6 toàn giải), 3.6 kiến tạo, 4.5 rebounds — thi đấu trọn 20 trận với hơn 34 phút mỗi trận, kỷ lục cá nhân 14 kiến tạo/trận.</p>
+          <span class="news-link">Xem highlight →</span>
+        </div>
+      </a>
+      <a class="news-card" href="https://www.facebook.com/Bongrovietnam/posts/pfbid022n3UiaUBU4ERwktuvGkGdcwMmJefbLKBmEgSUyTETAdaEDrBdkwHFhHGkGzRMntul" target="_blank" rel="noopener">
+        <div class="news-body">
+          <span class="news-date">22/08/2026 · Bóng Rổ Việt Nam</span>
+          <h4>Danang Dragons khép lại mùa giải VBA 2026</h4>
+          <p>Bài đăng đầy cảm xúc về hành trình 0–20 nhận được hàng trăm lượt tương tác — minh chứng cho tình yêu không điều kiện của người hâm mộ dành cho Rồng.</p>
+          <span class="news-link">Xem bài viết →</span>
+        </div>
+      </a>
     </div>
   </div>
 </section>
 
+<!-- ================= THƯ VIỆN ================= -->
+<section id="thu-vien">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-tag">Thư viện</span>
+      <h2>Khoảnh khắc Rồng</h2>
+      <p>Logo chính thức, hình ảnh thi đấu và những series được yêu thích nhất trên các kênh của đội.</p>
+    </div>
+    <div class="gallery reveal">
+      <figure class="g-item g-logo" data-full="img/logo-dragons.png" data-cap="Logo chính thức Danang Dragons">
+        <img src="img/logo-dragons.png" alt="Logo chính thức Danang Dragons" loading="lazy">
+        <figcaption>Logo chính thức</figcaption>
+      </figure>
+      <figure class="g-item" data-full="img/photo-trongtai-5.webp" data-cap="Phan Trọng Tài (#19) trong trận đấu VBA 2026 — ảnh: WebThểThao">
+        <img src="img/photo-trongtai-5.webp" alt="Phan Trọng Tài mang áo số 19 của Danang Dragons" loading="lazy">
+        <figcaption>Phan Trọng Tài #19 · VBA 2026</figcaption>
+      </figure>
+    </div>
+    <p class="table-note reveal" style="margin-bottom:36px">Ảnh: WebThểThao. Logo thuộc bản quyền CLB Danang Dragons.</p>
+
+    <h3 class="mini-head reveal">Series nổi bật <span>trên MXH</span></h3>
+    <div class="fan-acts reveal" style="margin-top:18px">
+      <a class="act link" href="https://www.instagram.com/reel/DcLnfsYCjml/" target="_blank" rel="noopener"><h5>🏫 School Visit — Tập 4 →</h5><p>Thăm trường St. Nicholas (18/08/2026) — lan tỏa bóng rổ đến thế hệ trẻ Đà Nẵng.</p></a>
+      <a class="act link" href="https://www.instagram.com/reel/DclAYXMw0NU/" target="_blank" rel="noopener"><h5>🔥 Highlight Michael Soy →</h5><p>Montage tổng kết mùa giải của “Iron Man” áo số 3 — 25 điểm trận chia tay sân nhà.</p></a>
+      <a class="act link" href="https://www.tiktok.com/@danangdragons" target="_blank" rel="noopener"><h5>🎬 Vlog “Way Back Home” →</h5><p>Hậu trường đội trở về Đà Nẵng chuẩn bị 2 trận sân nhà cuối mùa.</p></a>
+      <a class="act link" href="https://www.facebook.com/danangdragons" target="_blank" rel="noopener"><h5>🎙️ Open Mic #2: Nguyễn Đại Hiệp →</h5><p>Hậu trường buổi tập và câu chuyện của tân binh 30 tuổi lần đầu ký hợp đồng chuyên nghiệp.</p></a>
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div class="modal" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Xem ảnh lớn">
+  <div class="modal-backdrop" data-close></div>
+  <figure class="lb-card">
+    <button class="modal-close" data-close aria-label="Đóng">✕</button>
+    <img id="lbImg" src="" alt="">
+    <figcaption id="lbCap"></figcaption>
+  </figure>
+</div>
+
 <!-- ================= VÉ & SÂN ================= -->
-<section id="ve">
+<section id="ve" style="background:var(--bg-2)">
   <div class="wrap">
     <div class="sec-head reveal">
       <span class="sec-tag">Vé &amp; Sân nhà</span>
       <h2>Cùng Rồng “cháy” tại Quân khu 5</h2>
-      <p>Không khí sân nhà của Dragons luôn nằm trong top cuồng nhiệt nhất VBA. Đặt vé trước để có vị trí đẹp nhất.</p>
+      <p>Mùa giải 2026 đã khép lại — hẹn gặp lại người hâm mộ ở mùa giải mới với khí thế của Rồng sông Hàn.</p>
     </div>
     <div class="split">
       <div class="panel accent reveal">
@@ -270,10 +374,10 @@
       </div>
       <div class="panel reveal">
         <h3>Nhà thi đấu <span>Quân khu 5</span></h3>
-        <p>Sân nhà của Rồng sông Hàn — nơi chứng kiến chức vô địch lịch sử VBA 2016 và vô số đêm bóng rổ đáng nhớ của Đà Nẵng.</p>
+        <p>Sân nhà của Rồng sông Hàn từ 2016 — nơi chứng kiến chức vô địch lịch sử VBA 2016 và vô số đêm bóng rổ đáng nhớ của Đà Nẵng.</p>
         <div class="arena-facts">
           <div class="f"><div class="n">3.200</div><div class="l">Chỗ ngồi</div></div>
-          <div class="f"><div class="n">Đà Nẵng</div><div class="l">Thành phố</div></div>
+          <div class="f"><div class="n">07 Duy Tân</div><div class="l">Hải Châu, Đà Nẵng</div></div>
           <div class="f"><div class="n">2016</div><div class="l">Sân nhà từ</div></div>
           <div class="f"><div class="n">Top</div><div class="l">Không khí VBA</div></div>
         </div>
@@ -283,7 +387,7 @@
 </section>
 
 <!-- ================= NHÀ TÀI TRỢ ================= -->
-<section id="tai-tro" style="background:var(--bg-2);padding-top:84px;padding-bottom:84px">
+<section id="tai-tro" style="padding-top:84px;padding-bottom:84px">
   <div class="wrap">
     <div class="sec-head reveal">
       <span class="sec-tag">Đồng hành</span>
@@ -294,17 +398,17 @@
       <div class="sponsor"><div class="s-name">NEX<span>TIX</span></div><div class="s-role">Đối tác nền tảng bán vé online chính thức của đội</div></div>
       <div class="sponsor"><div class="s-name">FPT <span>Play</span></div><div class="s-role">Đơn vị phát sóng các trận đấu VBA</div></div>
     </div>
-    <p class="sponsor-note reveal">Trên áo đấu và bảng quảng cáo còn xuất hiện các thương hiệu MSB, Grab, TikTok — đây là nhà tài trợ của giải VBA. Trang sẽ cập nhật danh sách sponsor riêng của đội khi có công bố chính thức.</p>
+    <p class="sponsor-note reveal">Trên áo đấu và bảng quảng cáo còn xuất hiện các thương hiệu MSB, Grab, TikTok — đây là nhà tài trợ của giải VBA.</p>
   </div>
 </section>
 
 <!-- ================= CỘNG ĐỒNG ================= -->
-<section id="cong-dong">
+<section id="cong-dong" style="background:var(--bg-2)">
   <div class="wrap">
     <div class="sec-head reveal">
       <span class="sec-tag">Cộng đồng</span>
       <h2>Theo dõi Rồng mỗi ngày</h2>
-      <p>Kênh chính thức của đội và giải đấu — nơi cập nhật lịch thi đấu, hậu trường, và các hoạt động cộng đồng như series School Visit.</p>
+      <p>Kênh chính thức của đội và giải đấu — nơi cập nhật lịch thi đấu, hậu trường và các hoạt động cộng đồng.</p>
     </div>
     <div class="social-grid reveal">
       <a class="soc" href="https://www.facebook.com/danangdragons" target="_blank" rel="noopener">
@@ -325,10 +429,10 @@
       </a>
     </div>
     <div class="fan-acts reveal">
-      <div class="act"><h5>🏫 School Visit</h5><p>Series thăm trường học tại Đà Nẵng (tập 4 tại St. Nicholas, 08/2026) — lan tỏa bóng rổ đến thế hệ trẻ.</p></div>
+      <div class="act"><h5>🏫 School Visit</h5><p>Series thăm trường học tại Đà Nẵng — lan tỏa bóng rổ đến thế hệ trẻ.</p></div>
       <div class="act"><h5>🎙️ Open Mic</h5><p>Series giới thiệu cầu thủ và câu chuyện đời thường phía sau sân đấu.</p></div>
       <div class="act"><h5>🏀 Đồng hành U16 Quốc gia 5x5</h5><p>Đội chung tay phát triển bóng rổ trẻ Việt Nam.</p></div>
-      <div class="act"><h5>🎬 Vlog “Way Back Home”</h5><p>Hậu trường chuyến bay vào Sài Gòn cùng Danang Dragons.</p></div>
+      <div class="act"><h5>🎉 Gala Dinner 2026</h5><p>Đêm tri ân khép lại mùa giải cùng người hâm mộ và đối tác.</p></div>
     </div>
   </div>
 </section>
@@ -339,22 +443,18 @@
     <div class="foot-grid">
       <div class="foot-brand">
         <a class="brand" href="#top">
-          <svg class="mark" viewBox="0 0 64 64" aria-hidden="true" style="width:34px;height:34px">
-            <circle cx="32" cy="32" r="29" fill="#141416" stroke="#ff6b1a" stroke-width="3"/>
-            <path d="M20 44 L26 20 L32 32 L38 20 L44 44" fill="none" stroke="#ff6b1a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-            <circle cx="32" cy="48" r="2.6" fill="#ff6b1a"/>
-          </svg>
+          <img class="mark" src="img/logo-dragons.png" alt="Logo Danang Dragons" style="width:52px;height:auto">
           <span class="t"><small>DANANG</small><b>DRAGONS</b></span>
         </a>
         <p>Rồng sông Hàn — đội bóng rổ chuyên nghiệp của Đà Nẵng tại VBA từ mùa giải khai mạc 2016.</p>
       </div>
       <div class="foot-links">
-        <div><h6>Khám phá</h6><a href="#tong-quan">Tổng quan</a><a href="#lich-su">Lịch sử</a><a href="#doi-hinh">Đội hình</a><a href="#cau-thu">Cầu thủ</a></div>
-        <div><h6>Fan</h6><a href="#ve">Mua vé</a><a href="#cong-dong">Cộng đồng</a><a href="https://www.vba.vn" target="_blank" rel="noopener">Website VBA</a></div>
+        <div><h6>Khám phá</h6><a href="#tong-quan">Tổng quan</a><a href="#lich-su">Lịch sử</a><a href="#doi-hinh">Đội hình</a><a href="#tin-tuc">Tin tức</a></div>
+        <div><h6>Fan</h6><a href="#ve">Mua vé</a><a href="#thu-vien">Thư viện</a><a href="#cong-dong">Cộng đồng</a><a href="https://www.vba.vn" target="_blank" rel="noopener">Website VBA</a></div>
         <div><h6>Mạng xã hội</h6><a href="https://www.facebook.com/danangdragons" target="_blank" rel="noopener">Facebook</a><a href="https://www.instagram.com/danangdragons.official" target="_blank" rel="noopener">Instagram</a><a href="https://www.tiktok.com/@danangdragons" target="_blank" rel="noopener">TikTok</a></div>
       </div>
     </div>
-    <p class="disclaimer">Trang web fan-made, <b>không phải</b> trang chính thức của CLB Danang Dragons. Mọi số liệu, đội hình và thông tin được tổng hợp từ các nguồn công khai (Wikipedia, báo chí thể thao, kênh mạng xã hội của đội và VBA) tính đến 10/2026; một số thông tin mùa giải 2026 đang được cập nhật. Logo và hình ảnh cầu thủ thuộc bản quyền của chủ sở hữu tương ứng.</p>
+    <p class="disclaimer">Trang web fan-made, <b>không phải</b> trang chính thức của CLB Danang Dragons. Số liệu và tin tức tổng hợp từ các nguồn công khai (Wikipedia, WebThểThao, HTV, kênh MXH của đội và VBA) tính đến 10/2026. Logo thuộc bản quyền CLB Danang Dragons; ảnh thi đấu: WebThểThao.</p>
     <div class="copy"><span>© <span id="year">2026</span> Danang Dragons Fan Site — Rise Together 🐉</span><span>Thiết kế theo phong cách cam – đen của Rồng sông Hàn</span></div>
   </div>
 </footer>

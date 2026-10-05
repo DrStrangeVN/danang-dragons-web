@@ -350,3 +350,152 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px;background:var(--bg-
   .scroll-hint{display:none}
   .fact .k{flex:0 0 110px}
 }
+
+/* ============ Danang Dragons — v2 components ============ */
+
+/* Header logo img */
+.brand .mark{width:44px;height:auto;flex:none}
+.brand{font-size:inherit}
+
+/* Hero with real photo */
+.hero-photo{
+  position:absolute;inset:0;
+  background:url("../img/photo-trongtai-5.webp") center 30%/cover no-repeat;
+  opacity:.34;
+}
+.hero-shade{
+  position:absolute;inset:0;
+  background:
+    linear-gradient(180deg,rgba(10,10,11,.62) 0%,rgba(10,10,11,.38) 45%,var(--bg) 100%),
+    radial-gradient(900px 520px at 82% 18%,rgba(255,107,26,.14),transparent 60%);
+}
+.hero-logo-row{margin-bottom:8px}
+.hero-logo{
+  width:150px;height:auto;
+  filter:drop-shadow(0 10px 30px rgba(0,0,0,.6));
+}
+
+/* Ticker */
+.ticker{
+  overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  background:var(--orange);color:#101010;white-space:nowrap;
+}
+.ticker-track{display:inline-flex;align-items:center;gap:26px;padding:11px 0;animation:tick 26s linear infinite}
+.ticker-track span{font-weight:800;font-size:13px;letter-spacing:.22em}
+.ticker-track i{font-style:normal;font-size:10px}
+@keyframes tick{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.ticker-track{animation:none}}
+
+/* Mini head */
+.mini-head{font-size:21px;font-weight:800;margin-bottom:6px}
+.mini-head span{color:var(--orange)}
+
+/* Chart */
+.chart-block{margin-top:56px;border:1px solid var(--line);border-radius:var(--radius);padding:32px;background:var(--card)}
+.chart-block h3{font-size:21px;font-weight:800}
+.chart-block h3 span{color:var(--orange)}
+.chart-sub{color:var(--muted);font-size:14px;margin:6px 0 18px}
+.chart-wrap{position:relative}
+#winsChart{width:100%;display:block}
+
+/* Standings */
+tr.us td{background:rgba(255,107,26,.07)}
+tr.us td b{color:var(--orange)}
+
+/* Results */
+.results{display:flex;flex-direction:column;gap:10px}
+.result{
+  display:flex;align-items:center;gap:14px;
+  border:1px solid var(--line);border-radius:12px;padding:13px 16px;background:var(--card);
+}
+.r-date{font-size:12.5px;font-weight:700;color:var(--faint);flex:0 0 52px;letter-spacing:.04em}
+.r-teams{flex:1;font-size:14.5px}
+.r-teams b{color:var(--orange)}
+.r-teams span{color:var(--faint);font-size:13px}
+
+/* Player cards as buttons */
+button.pcard{font-family:inherit;text-align:left;cursor:pointer;color:inherit;width:100%}
+button.pcard h4,button.pcard .nat{position:relative}
+.pcard .more{display:block;margin-top:12px;font-size:12.5px;font-weight:700;color:var(--orange);letter-spacing:.06em}
+
+/* Modal */
+.modal{position:fixed;inset:0;z-index:100;display:grid;place-items:center;padding:20px;visibility:hidden;opacity:0;transition:.25s}
+.modal.open{visibility:visible;opacity:1}
+.modal-backdrop{position:absolute;inset:0;background:rgba(5,5,6,.72);backdrop-filter:blur(6px)}
+.modal-card{
+  position:relative;width:min(560px,100%);max-height:88vh;overflow:auto;
+  background:#141416;border:1px solid var(--line-strong);border-radius:20px;padding:34px;
+  transform:translateY(14px) scale(.98);transition:.25s;
+}
+.modal.open .modal-card{transform:none}
+.modal-close{
+  position:absolute;top:14px;right:14px;width:36px;height:36px;border-radius:50%;
+  border:1px solid var(--line);background:transparent;color:var(--muted);font-size:15px;cursor:pointer;
+}
+.modal-close:hover{color:var(--orange);border-color:var(--orange)}
+.pm-top{display:flex;gap:20px;align-items:center;margin-bottom:18px}
+.pm-jersey{
+  width:92px;height:92px;flex:none;border-radius:18px;display:grid;place-items:center;
+  background:linear-gradient(140deg,rgba(255,107,26,.25),rgba(255,107,26,.05));
+  border:1px solid rgba(255,107,26,.4);font-size:34px;font-weight:800;color:var(--orange);
+}
+.pm-pos{font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--orange);margin-bottom:6px}
+.pm-top h3{font-size:26px;font-weight:800}
+.pm-bio{color:#cfccc4;font-size:15px;margin-bottom:18px}
+.pm-stats{list-style:none;border-top:1px solid var(--line)}
+.pm-stats li{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-bottom:1px solid var(--line);font-size:14.5px}
+.pm-stats li span:first-child{color:var(--muted)}
+.pm-stats li span:last-child{font-weight:700;text-align:right}
+
+/* News */
+.news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.news-card{
+  border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--card);
+  display:flex;flex-direction:column;transition:transform .2s,border-color .2s;
+}
+.news-card:hover{transform:translateY(-4px);border-color:rgba(255,107,26,.45)}
+.news-card.featured{grid-column:span 2;flex-direction:row}
+.news-card.featured img{width:46%;object-fit:cover;min-height:260px}
+.news-card img{width:100%;height:190px;object-fit:cover}
+.news-body{padding:24px;display:flex;flex-direction:column;flex:1}
+.news-date{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--orange)}
+.news-body h4{font-size:18px;font-weight:800;margin:10px 0 8px;line-height:1.4}
+.news-card.featured .news-body h4{font-size:23px}
+.news-body p{color:var(--muted);font-size:14px;flex:1}
+.news-link{margin-top:14px;font-size:13.5px;font-weight:700;color:var(--orange)}
+@media(max-width:920px){.news-grid{grid-template-columns:1fr 1fr}.news-card.featured{grid-column:span 2}}
+@media(max-width:640px){.news-grid{grid-template-columns:1fr}.news-card.featured{grid-column:span 1;flex-direction:column}.news-card.featured img{width:100%;min-height:0}}
+
+/* Gallery */
+.gallery{display:grid;grid-template-columns:1fr 1.6fr;gap:18px}
+.g-item{
+  position:relative;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;
+  cursor:zoom-in;background:#0e0e10;margin:0;transition:border-color .2s,transform .2s;
+}
+.g-item:hover{border-color:rgba(255,107,26,.5);transform:translateY(-3px)}
+.g-item img{width:100%;height:100%;object-fit:cover;display:block;min-height:280px}
+.g-logo{display:grid;place-items:center;padding:40px;background:radial-gradient(circle at 50% 40%,rgba(255,107,26,.12),transparent 70%),#0e0e10}
+.g-logo img{min-height:0;max-height:300px;object-fit:contain}
+.g-item figcaption{
+  position:absolute;left:0;right:0;bottom:0;padding:26px 18px 14px;font-size:13.5px;font-weight:600;
+  background:linear-gradient(transparent,rgba(0,0,0,.78));
+}
+@media(max-width:760px){.gallery{grid-template-columns:1fr}}
+
+/* Lightbox */
+.lb-card{position:relative;max-width:min(1000px,94vw);margin:0}
+.lb-card img{max-width:100%;max-height:78vh;border-radius:14px;border:1px solid var(--line-strong);display:block}
+.lb-card figcaption{text-align:center;color:var(--muted);font-size:13.5px;margin-top:12px}
+.lb-card .modal-close{z-index:2;background:rgba(10,10,11,.7)}
+
+/* Act links */
+.act.link{display:block;transition:.2s}
+.act.link:hover h5{color:var(--orange)}
+.act.link h5{transition:.2s}
+
+/* Responsive tweaks */
+@media(max-width:760px){
+  .hero-logo{width:110px}
+  .pm-top h3{font-size:21px}
+  .modal-card{padding:26px 22px}
+}
