@@ -99,17 +99,6 @@ a{color:inherit;text-decoration:none}
   mask-image:radial-gradient(75% 75% at 50% 40%,#000 30%,transparent 100%);
   -webkit-mask-image:radial-gradient(75% 75% at 50% 40%,#000 30%,transparent 100%);
 }
-.kicker{
-  display:inline-flex;align-items:center;gap:10px;
-  font-size:12.5px;font-weight:700;letter-spacing:.24em;color:var(--orange);
-  text-transform:uppercase;margin-bottom:22px;
-}
-.kicker::before{content:"";width:34px;height:2px;background:var(--orange);border-radius:2px}
-.hero h1{
-  font-size:clamp(52px,9.2vw,128px);
-  font-weight:800;line-height:.98;letter-spacing:-.015em;
-  margin-bottom:10px;
-}
 .hero h1 .row2{
   color:transparent;-webkit-text-stroke:2px var(--orange);
 }
@@ -119,15 +108,6 @@ a{color:inherit;text-decoration:none}
 }
 .hero .sub b{color:var(--ink)}
 .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
-.hero-meta{
-  display:flex;gap:0;margin-top:56px;border-top:1px solid var(--line);
-  flex-wrap:wrap;
-}
-.hero-meta .m{padding:20px 34px 0 0;margin-right:34px;border-right:1px solid var(--line)}
-.hero-meta .m:last-child{border:0}
-.hero-meta .n{font-size:30px;font-weight:800;color:var(--ink)}
-.hero-meta .n em{font-style:normal;color:var(--orange)}
-.hero-meta .l{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);font-weight:600;margin-top:4px}
 
 /* scroll hint */
 .scroll-hint{
@@ -345,8 +325,6 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px;background:var(--bg-
   .nav-links a{padding:13px 8px;font-size:15px}
   .nav-links .btn{margin-top:10px;justify-content:center}
   .burger{display:block}
-  .hero-meta .m{padding:14px 22px 0 0;margin-right:22px}
-  .hero-meta .n{font-size:24px}
   .scroll-hint{display:none}
   .fact .k{flex:0 0 110px}
 }
@@ -369,12 +347,6 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px;background:var(--bg-
     linear-gradient(180deg,rgba(10,10,11,.62) 0%,rgba(10,10,11,.38) 45%,var(--bg) 100%),
     radial-gradient(900px 520px at 82% 18%,rgba(255,107,26,.14),transparent 60%);
 }
-.hero-logo-row{margin-bottom:8px}
-.hero-logo{
-  width:150px;height:auto;
-  filter:drop-shadow(0 10px 30px rgba(0,0,0,.6));
-}
-
 /* Ticker */
 .ticker{
   overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
@@ -495,7 +467,6 @@ button.pcard h4,button.pcard .nat{position:relative}
 
 /* Responsive tweaks */
 @media(max-width:760px){
-  .hero-logo{width:110px}
   .pm-top h3{font-size:21px}
   .modal-card{padding:26px 22px}
 }
@@ -563,3 +534,171 @@ button.poll-opt{font-weight:600}
   padding:8px 16px;border-radius:999px;backdrop-filter:blur(6px);
 }
 @media(max-width:640px){.wp-grid{grid-template-columns:1fr}}
+
+/* ============ Danang Dragons — v4: "Arena at tip-off" ============
+   Design pass with the frontend-design skill.
+   - Display type: Barlow Condensed (Vietnamese subset) for headlines,
+     jersey numbers, scoreboard — jersey-poster voice.
+   - Body/UI stays Be Vietnam Pro.
+   - One orchestrated hero moment: court line-art draws in, type locks up.
+   - Nameplate tabs replace generic eyebrow labels; card radii vary
+     by component instead of one radius everywhere.
+================================================================= */
+
+:root{
+  --display:"Barlow Condensed","Be Vietnam Pro",system-ui,sans-serif;
+  --ember:#ffb03a;
+}
+
+/* ---------- Nameplate: jersey-patch tab replaces eyebrow labels ---------- */
+.sec-tag{
+  display:inline-block;
+  font-family:var(--display);font-weight:600;font-size:14px;
+  letter-spacing:.24em;text-transform:uppercase;
+  color:#101010;background:var(--orange);
+  padding:7px 20px 7px 15px;margin-bottom:20px;
+  clip-path:polygon(0 0,100% 0,calc(100% - 11px) 100%,0 100%);
+}
+.nameplate{
+  display:inline-block;
+  font-family:var(--display);font-weight:600;font-size:15px;
+  letter-spacing:.24em;text-transform:uppercase;
+  color:#101010;background:var(--orange);
+  padding:8px 22px 8px 16px;margin-bottom:26px;
+  clip-path:polygon(0 0,100% 0,calc(100% - 12px) 100%,0 100%);
+}
+
+/* ---------- Display type across section furniture ---------- */
+.sec-head h2{
+  font-family:var(--display);font-weight:600;
+  font-size:clamp(40px,5.6vw,64px);line-height:1.0;letter-spacing:.015em;
+  text-transform:uppercase;
+}
+.mini-head{
+  font-family:var(--display);font-weight:600;font-size:27px;
+  letter-spacing:.03em;text-transform:uppercase;
+}
+.chart-block h3,.poll h3,.panel h3{
+  font-family:var(--display);font-weight:600;letter-spacing:.03em;
+  text-transform:uppercase;
+}
+.chart-block h3{font-size:27px}
+.poll h3{font-size:28px}
+.panel h3{font-size:26px}
+.pcard h4{
+  font-family:var(--display);font-weight:600;font-size:23px;
+  letter-spacing:.03em;text-transform:uppercase;
+}
+.pcard .jersey{font-family:var(--display);font-size:88px}
+.tl-item .yr{
+  font-family:var(--display);font-weight:600;font-size:29px;
+  letter-spacing:.04em;color:var(--orange);
+}
+.a-stats b{font-family:var(--display);font-weight:600;font-size:30px;letter-spacing:.02em}
+.scoreboard b{font-family:var(--display);font-weight:600}
+.pm-jersey{font-family:var(--display);font-size:46px}
+.arena-facts .f .n{font-family:var(--display);font-weight:600;font-size:28px;letter-spacing:.02em}
+.roster-group>h3{
+  font-family:var(--display);font-weight:600;font-size:21px;
+  letter-spacing:.22em;
+}
+.ticker-track span{
+  font-family:var(--display);font-weight:600;font-size:15px;letter-spacing:.3em;
+}
+.news-body h4{font-family:var(--display);font-weight:600;font-size:21px;letter-spacing:.02em}
+.news-card.featured .news-body h4{font-size:28px}
+
+/* ---------- Hero: architectural type over a drawn court ---------- */
+.hero-inner{position:relative;width:100%;z-index:2}
+.hero h1{
+  font-family:var(--display);font-weight:700;
+  font-size:clamp(68px,11.5vw,176px);line-height:.9;letter-spacing:.008em;
+  text-transform:uppercase;margin-bottom:8px;
+}
+.hero h1 .l1{display:block;color:var(--ink)}
+.hero h1 .l2{
+  display:block;color:transparent;
+  -webkit-text-stroke:2.5px var(--orange);
+}
+.hero .sub{max-width:600px}
+.hero-inner>*{opacity:0;animation:heroIn .85s cubic-bezier(.2,.7,.2,1) forwards}
+.hero-inner>.nameplate{animation-delay:.1s}
+.hero-inner>h1{animation-delay:.28s}
+.hero-inner>.sub{animation-delay:.46s}
+.hero-inner>.hero-cta{animation-delay:.62s}
+.hero-inner>.scoreboard{animation-delay:.78s}
+@keyframes heroIn{
+  from{opacity:0;transform:translateY(30px)}
+  to{opacity:1;transform:none}
+}
+
+/* Court line-art, drawn once on load */
+.court{
+  position:absolute;right:-150px;bottom:-130px;
+  width:min(880px,96vw);height:auto;
+  color:var(--ember);opacity:.2;pointer-events:none;z-index:1;
+}
+.court .draw{
+  stroke-dasharray:1;stroke-dashoffset:1;
+  animation:draw 1.7s cubic-bezier(.4,0,.2,1) forwards;
+}
+.court .d1{animation-delay:.2s}
+.court .d2{animation-delay:.45s}
+.court .d3{animation-delay:.65s}
+.court .d4{animation-delay:.8s}
+.court .d5{animation-delay:.95s}
+.court .d6{animation-delay:1.1s}
+@keyframes draw{to{stroke-dashoffset:0}}
+
+/* ---------- Scoreboard strip ---------- */
+.scoreboard{
+  display:flex;margin-top:54px;max-width:780px;
+  border:1px solid var(--line-strong);border-radius:14px;overflow:hidden;
+  background:rgba(8,8,10,.62);
+  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+}
+.scoreboard .cell{flex:1;padding:18px 24px;border-left:1px solid var(--line)}
+.scoreboard .cell:first-child{border-left:0}
+.scoreboard b{display:block;font-size:36px;line-height:1;color:var(--ink);letter-spacing:.02em}
+.scoreboard span{display:block;margin-top:6px;font-size:12.5px;color:var(--faint)}
+
+/* ---------- Card treatments vary by component ---------- */
+.pcard{border-radius:10px}                       /* jersey cards: sharp */
+.news-card{border-radius:8px}                    /* editorial: sharpest */
+.soc{border-radius:14px}
+.poll{border-radius:18px}
+.chart-block,.table-scroll{border-radius:14px}
+.pcard .jersey{color:rgba(255,255,255,.08)}
+
+/* ---------- Reveal v2: snappier rise + stagger, once ---------- */
+.reveal{
+  opacity:0;transform:translateY(18px);
+  transition:opacity .55s cubic-bezier(.2,.7,.2,1),transform .55s cubic-bezier(.2,.7,.2,1);
+  transition-delay:var(--d,0s);
+}
+.reveal.in{opacity:1;transform:none}
+
+/* ---------- Quality floor ---------- */
+a:focus-visible,button:focus-visible{
+  outline:2px solid var(--orange);outline-offset:3px;border-radius:6px;
+}
+
+/* ---------- Responsive ---------- */
+@media(max-width:920px){
+  .court{right:-220px;bottom:-160px;width:130vw;opacity:.16}
+}
+@media(max-width:640px){
+  .scoreboard{flex-wrap:wrap}
+  .scoreboard .cell{flex:1 1 40%;border-top:1px solid var(--line)}
+  .scoreboard .cell:nth-child(-n+2){border-top:0}
+  .scoreboard .cell:nth-child(odd){border-left:0}
+  .scoreboard b{font-size:30px}
+  .hero h1 .l2{-webkit-text-stroke:1.6px var(--orange)}
+}
+@media (prefers-reduced-motion:reduce){
+  .hero-inner>*{opacity:1;animation:none}
+  .court .draw{stroke-dashoffset:0;animation:none}
+  .reveal{opacity:1;transform:none;transition:none}
+  html{scroll-behavior:auto}
+  .ticker-track{animation:none}
+}

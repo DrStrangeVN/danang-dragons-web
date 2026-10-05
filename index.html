@@ -13,7 +13,7 @@
 <link rel="icon" href="img/logo-dragons.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <meta name="theme-color" content="#0a0a0b">
 <link rel="manifest" href="manifest.json">
 <link rel="apple-touch-icon" href="img/logo-dragons.png">
@@ -53,22 +53,29 @@
   <div class="hero-photo" aria-hidden="true"></div>
   <div class="hero-shade" aria-hidden="true"></div>
   <div class="hero-grid-lines" aria-hidden="true"></div>
-  <div class="wrap" style="position:relative;width:100%">
-    <div class="hero-logo-row reveal in">
-      <img src="img/logo-dragons.png" alt="Logo chính thức Danang Dragons" class="hero-logo" width="150">
-    </div>
-    <p class="kicker">VBA · Vietnam Basketball Association · Est. 2016</p>
-    <h1>DANANG<br><span class="row2">DRAGONS</span></h1>
-    <p class="sub"><b>Rồng sông Hàn</b> — đội bóng rổ chuyên nghiệp của thành phố Đà Nẵng. Nhà vô địch mùa giải khai mạc VBA 2016 với kỳ tích từ hạt giống thấp nhất.</p>
+  <svg class="court" viewBox="0 0 640 640" aria-hidden="true">
+    <g fill="none" stroke="currentColor" stroke-width="2.5">
+      <rect class="draw d1" pathLength="1" x="60" y="60" width="520" height="520"/>
+      <path class="draw d2" pathLength="1" d="M140 580 A 210 210 0 0 1 500 580"/>
+      <rect class="draw d3" pathLength="1" x="250" y="400" width="140" height="180"/>
+      <circle class="draw d4" pathLength="1" cx="320" cy="400" r="52"/>
+      <circle class="draw d5" pathLength="1" cx="320" cy="150" r="64"/>
+      <line class="draw d6" pathLength="1" x1="60" y1="320" x2="580" y2="320"/>
+    </g>
+  </svg>
+  <div class="wrap hero-inner">
+    <span class="nameplate">VBA · Vietnam Basketball Association · Est. 2016</span>
+    <h1><span class="l1">Rồng sông Hàn</span><span class="l2">Danang Dragons</span></h1>
+    <p class="sub">Đội bóng rổ chuyên nghiệp của thành phố Đà Nẵng — nhà vô địch mùa giải khai mạc VBA 2016 với kỳ tích từ hạt giống thấp nhất.</p>
     <div class="hero-cta">
       <a class="btn" href="https://ticket.danangdragons.nextix.cloud" target="_blank" rel="noopener">Mua vé xem trận</a>
       <a class="btn ghost" href="#doi-hinh">Xem đội hình</a>
     </div>
-    <div class="hero-meta">
-      <div class="m"><div class="n"><em>2016</em></div><div class="l">Năm thành lập</div></div>
-      <div class="m"><div class="n">1×</div><div class="l">Vô địch VBA</div></div>
-      <div class="m"><div class="n">11</div><div class="l">Mùa giải VBA</div></div>
-      <div class="m"><div class="n">79K+</div><div class="l">Fan trên Facebook</div></div>
+    <div class="scoreboard">
+      <div class="cell"><b>2016</b><span>Năm thành lập</span></div>
+      <div class="cell"><b>1×</b><span>Vô địch VBA</span></div>
+      <div class="cell"><b>11</b><span>Mùa giải</span></div>
+      <div class="cell"><b>79K+</b><span>Fan trên Facebook</span></div>
     </div>
   </div>
   <div class="scroll-hint" aria-hidden="true">Cuộn xuống</div>
@@ -208,9 +215,9 @@
         <h3 class="mini-head">5 trận cuối <span>mùa 2026</span></h3>
         <div class="results" style="margin-top:16px">
           <div class="result"><div class="r-date">22/08</div><div class="r-teams"><b>Dragons</b> 91 – 105 Dolphins</div><span class="badge dim">Thua</span></div>
-          <div class="result"><div class="r-date">20/08</div><div class="r-teams"><b>Dragons</b> 78 – 99 <span>Đối thủ</span></div><span class="badge dim">Thua</span></div>
-          <div class="result"><div class="r-date">15/08</div><div class="r-teams"><b>Dragons</b> 78 – 112 <span>Đối thủ</span></div><span class="badge dim">Thua</span></div>
-          <div class="result"><div class="r-date">13/08</div><div class="r-teams"><b>Dragons</b> 90 – 94 <span>Đối thủ</span></div><span class="badge dim">Thua</span></div>
+          <div class="result"><div class="r-date">20/08</div><div class="r-teams"><b>Dragons</b> 78 – 99 Dolphins</div><span class="badge dim">Thua</span></div>
+          <div class="result"><div class="r-date">15/08</div><div class="r-teams"><b>Dragons</b> 78 – 112 Dolphins</div><span class="badge dim">Thua</span></div>
+          <div class="result"><div class="r-date">13/08</div><div class="r-teams"><b>Dragons</b> 90 – 94 Dolphins</div><span class="badge dim">Thua</span></div>
           <div class="result"><div class="r-date">09/08</div><div class="r-teams"><b>Dragons</b> 91 – 120 Buffaloes</div><span class="badge dim">Thua</span></div>
         </div>
         <p class="table-note">Nguồn: BetExplorer. Mùa giải VBA 2026 đã khép lại (playoff 05–27/09/2026).</p>

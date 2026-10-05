@@ -28,8 +28,14 @@
     });
   });
 
-  /* ---------- Reveal on scroll ---------- */
+  /* ---------- Reveal on scroll (v4: staggered) ---------- */
   var revealEls = document.querySelectorAll(".reveal");
+  revealEls.forEach(function (el) {
+    var sibs = Array.prototype.filter.call(el.parentElement.children, function (c) {
+      return c.classList && c.classList.contains("reveal");
+    });
+    el.style.setProperty("--d", Math.min(Math.max(sibs.indexOf(el), 0), 5) * 80 + "ms");
+  });
   if ("IntersectionObserver" in window) {
     var io = new IntersectionObserver(
       function (entries) {
@@ -179,7 +185,7 @@
       // gridlines
       ctx.strokeStyle = "rgba(255,255,255,.07)";
       ctx.fillStyle = "#6e6a61";
-      ctx.font = "11px 'Be Vietnam Pro', sans-serif";
+      ctx.font = "11px 'Barlow Condensed','Be Vietnam Pro',sans-serif";
       ctx.textAlign = "right";
       for (var g = 0; g <= max; g += 2) {
         var gy = padT + ch - (g / max) * ch;
@@ -206,17 +212,17 @@
         ctx.lineTo(x + bw, y + h); ctx.closePath(); ctx.fill();
 
         ctx.fillStyle = wins[i] === 0 ? "#6e6a61" : "#f4f1ea";
-        ctx.font = "700 12px 'Be Vietnam Pro', sans-serif";
+        ctx.font = "700 12px 'Barlow Condensed','Be Vietnam Pro',sans-serif";
         ctx.fillText(wins[i], x + bw / 2, y - 7);
 
         ctx.fillStyle = champ[i] ? "#ff6b1a" : "#6e6a61";
-        ctx.font = (champ[i] ? "800" : "600") + " 11px 'Be Vietnam Pro', sans-serif";
+        ctx.font = (champ[i] ? "700" : "600") + " 11px 'Barlow Condensed','Be Vietnam Pro',sans-serif";
         ctx.fillText("’" + seasons[i].slice(2), x + bw / 2, H - 10);
       }
 
       // champion marker
       ctx.fillStyle = "#ff6b1a";
-      ctx.font = "700 11px 'Be Vietnam Pro', sans-serif";
+      ctx.font = "700 11px 'Barlow Condensed','Be Vietnam Pro',sans-serif";
       ctx.textAlign = "left";
       ctx.fillText("🏆 Vô địch", padL + slot * 0 + (slot - bw) / 2 - 8, padT - 2);
     }
